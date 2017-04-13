@@ -1,0 +1,35 @@
+header,footer,aside,main{
+	border:1px solid #CD0000;
+}
+*{
+	box-sizing:border-box;
+}
+bady{
+	padding:0;
+	margin: 0;
+}
+.clearfix::after{
+	content: "";
+	display:table;
+	clear:both;
+}
+#wrapper{
+	max-width:1200px;
+	min-width:800px;
+	margin:auto;
+}
+header,footer{
+	margin:2px 0;
+	height:260px;
+}
+aside{
+	width:20%;
+	margin-right:0px;
+	float:left;
+	min-height:500px;
+}
+main{
+	width:80%;
+	float:right;
+	min-height:500px;
+}
