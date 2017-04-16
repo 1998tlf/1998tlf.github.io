@@ -33,3 +33,20 @@ main{
 	float:right;
 	min-height:500px;
 }
+a{
+	
+	font-size: 30px;
+	font-weight: 800;
+}
+a:link{
+	color: #FFFF00;
+}
+a:visited{
+	color: #8B8B00;
+} 
+a:hover{
+	color: #8E388E;
+}
+a:active{
+	color: #0f0;
+}
