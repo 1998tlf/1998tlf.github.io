@@ -1,0 +1,65 @@
+.clearfix::after{
+	content: "";
+	clear: both;
+	display: block;
+}
+
+.container{
+	max-width: 1200px;
+	margin: auto;
+}
+a{
+	text-decoration: none;
+}
+ul{
+	padding: 0;
+    margin: 0;
+    list-style: none;
+}
+body{
+	margin:0;
+	color: #000;
+}
+
+header{
+	width: 100%;
+	padding: 20px 0px;
+	position: fixed;
+	left: 0;
+	top: 0;
+	background-color:rgba(0,0,0,.3);
+	transition: all .5s;
+	z-index: 1;
+}
+
+header .logo{
+	float: left;
+}
+header .logo a img{
+    display: inline-block;
+    vertical-align: middle;
+}
+header .logo span.spanText{
+	font-size: 3em;
+	vertical-align: middle;
+	color: #fff;
+	font-family: 'Dancing Script', cursive;
+}
+
+.topMenu{
+	float: right;
+}
+
+.topMenu ul li{
+	float: left;
+	margin: 20px;
+}
+
+.topMenu ul li a{
+	color: #fff;
+	text-shadow: 1px 1px 3px rgba(0,0,0,.4) ;
+	transition: color .5s;
+}
+.topMenu ul li a:hover{
+	color: #339BEB;
+}
