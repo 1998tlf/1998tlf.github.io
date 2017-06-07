@@ -1,0 +1,154 @@
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
+html, body, div, ul, ol, li {
+	margin: 0;
+	padding: 0;
+}
+html {
+	min-width: 1000px;
+	background: #ad0833
+}
+body {
+	font: 13px/20px "Hiragino Sans GB", "Microsoft Yahei", "SimHei"
+}
+img {
+	vertical-align: middle;
+}
+ul {
+	list-style-type: none;
+}
+a:link, a:visited {
+	outline: none;
+	text-decoration: none;
+	color: #7f7f7f;
+}
+a:hover, a:focus {
+	text-decoration: none;
+	color: #000;
+}
+a img, :link img, :visited img {
+	border: 0;
+}
+/* 本特效css样式 */
+.banner {
+	position: relative;
+	overflow: auto;
+}
+.banner li {
+	list-style: none;
+}
+.banner ul li {
+	float: left;
+}
+.banner .arrows {
+	display: none;
+}
+.banner:hover .arrows, .banner.hover .arrows {
+	display: block;
+}
+ @media only screen {
+ .banner .arrows {
+ -webkit-transition: opacity 0.4s;
+ transition: opacity 0.4s;
+ opacity: 0;
+ display: block;
+}
+ .banner:hover .arrows,  .banner.hover .arrows {
+ opacity: 1;
+}
+}
+.banner .arrows {
+	position: absolute;
+	z-index: 20;
+}
+.banner .arrows .prev, .banner .arrows .next {
+	position: absolute;
+	width: 76px;
+	height: 77px;
+	font: 0/0 a;
+	color: transparent;
+	cursor: pointer;
+}
+.banner .arrows .prev {
+	left: 30px;
+	background: url(../images/slide_arrow_left.png) no-repeat;
+}
+.banner .arrows .next {
+	left: 900px;
+	background: url(../images/slide_arrow_right.png) no-repeat;
+}
+.wrapper {
+	position: relative;
+	width: 1000px;
+	margin: 0 auto;
+	zoom: 1;
+}
+.section4 {
+	height: 660px;
+}
+.section4 .banner ul li {
+	height: 660px;
+}
+.section4 .banner .arrows {
+	top: 270px;
+}
+.section4 .dots {
+	position: absolute;
+	width: 1000px;
+	height: 60px;
+	top: 600px;
+	text-align: center;
+	font-size: 15px;
+	background: #fff;
+}
+.section4 .dot {
+	float: left;
+	line-height: 56px;
+	width: 166px;
+	border-bottom: 2px solid;
+	border-top: 2px solid #e8e8e8;
+	cursor: pointer;
+}
+.section4 .dot1 {
+	color: #e33189;
+	border-bottom-color: #f3bfd9;
+}
+.section4 .dot1.active {
+	background: #f3bfd9;
+}
+.section4 .dot2 {
+	color: #24adac;
+	border-bottom-color: #a4f7f6;
+}
+.section4 .dot2.active {
+	background: #a4f7f6;
+}
+.section4 .dot3 {
+	color: #dc6f23;
+	border-bottom-color: #edcfbb;
+}
+.section4 .dot3.active {
+	background: #edcfbb;
+}
+.section4 .dot4 {
+	color: #da4e4e;
+	border-bottom-color: #f0b5b5;
+}
+.section4 .dot4.active {
+	background: #f0b5b5;
+}
+.section4 .dot5 {
+	color: #8344c3;
+	border-bottom-color: #c0c8f4;
+}
+.section4 .dot5.active {
+	background: #c0c8f4;
+}
+.section4 .dot6 {
+	width: 170px;
+	color: #1774e2;
+	border-bottom-color: #b8e6fb;
+}
+.section4 .dot6.active {
+	background: #b8e6fb;
+}
+/* 代码整理：懒人之家 www.lanrenzhijia.com */
