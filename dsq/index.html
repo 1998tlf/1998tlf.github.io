@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			.clock{
+				width: 300px;
+				height: 300px;
+				background: url(img/clock.jpg);
+				background-size: 100% ;
+				
+				position: relative;
+			}
+			.sce{
+				width: 2px;
+				height: 85px;
+				transform-origin:top center;
+				position: absolute;
+				background-color: red;
+				left: 150px;
+				top: 150px;
+			}
+			.min{
+				width: 2px;
+				height: 80px;
+				transform-origin:bottom center;
+				position: absolute;
+				background-color: black;
+				left: 150px;
+				top: 70px;
+			}
+			.hor{
+				width: 3px;
+				height: 50px;
+				transform-origin:bottom center;
+				position: absolute;
+				background-color: black;
+				left: 150px;
+				top: 100px;
+			}
+		</style>
+	</head>
+	<body>
+		
+        <div class="clock">
+        	<div class="sce">
+        	</div>
+        	<div class="hor">        		
+        	</div>
+        	<div class="min">       		
+        	</div>
+        </div>
+		<script type="text/javascript">
+			var now; 
+			var h,m,s;
+			var oclock=document.querySelector('.clock');
+			var os=document.querySelector('.sce');
+			var om=document.querySelector('.min');
+			var oh=document.querySelector('.hor');
+			function refresh() {
+				now=new Date();
+				h=now.getHours();
+				s=now.getSeconds();
+				m=now.getMinutes();
+				os.style.transform="rotate("+s*6+"deg)";
+				om.style.transform="rotate("+(m+s/60)*6+"deg)";
+				oh.style.transform="rotate("+(h+s/3600+m/60)*30+"deg)";
+			}
+		setInterval(refresh,1000);
+		  
+		   
+		    
+	        
+		</script>
+	</body>
+</html>

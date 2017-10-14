@@ -1,0 +1,54 @@
+
+
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		
+
+	</head>
+	
+	<body>
+		<div class="a">
+			<h2>抽奖游戏</h2>
+			<h4>一等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<h4>二等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" />
+			<h4>三等奖</h4>
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" />
+			<input type="text" name="text" class="text" value="" />
+			<input type="button" name="button" id="button" value="抽奖" />
+		</div>
+	</body>
+	<script type="text/javascript">
+		var text=document.getElementsByClassName("text");
+		var n=[];
+//		n[0]=Math.floor(Math.random()*46);
+		var x=[];
+		var i=0;
+		var j=0;
+		var button=document.getElementById("button");
+		for(i=1;i<47;i++){
+			x[i-1]=i;
+		}
+		button.addEventListener("click",fang);
+		function fang () {
+			for(i=0;i<6;i++){
+				n[i]=Math.floor(Math.random()*46+1);
+				for(j=0;j<i;j++){
+					if(n[j]==n[i]){
+						i--;
+					}
+				}
+			}
+			for (i=0;i<6;i++) {
+				text[i].value=n[i];
+			}
+		}
+		console.log(x)
+	</script>
+</html>
