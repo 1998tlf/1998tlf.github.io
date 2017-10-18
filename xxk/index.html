@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	
+	<head>
+		<meta charset="utf-8" />
+		<title>tab选项卡</title>
+
+	</head>
+	<body>
+		
+	    <div class="tab">
+		   <input type="button" id="" value="1" />
+		   <input type="button" id="" value="2" />
+		   <input type="button" id="" value="3" />
+		   <input type="button" id="" value="4" />
+		   <input type="button" id="" value="5" />
+		</div>
+		<div class="t"></div>
+		<script type="text/javascript">
+		
+			var obtn=document.querySelectorAll(".tab input");
+			var ot=document.querySelectorAll(".t");
+			var i;
+			for (i=0;i<obtn.length;i++) {
+				
+				obtn[i].addEventListener("click",(function(index){
+					return function(){
+						ot[0].innerText="你点击了"+index+"按钮";
+					};
+				}(i+1)));  
+			}
+		</script>
+		
+	</body>
+
+</html>
