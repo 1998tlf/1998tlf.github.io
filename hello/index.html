@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<style type="text/css">
+			#d{
+				width: 400px;
+				height: 250px;
+				background-color: gray;
+				position: absolute;
+				left: 550px;
+				overflow: hidden;
+			}
+			
+			#son{
+				width: 80px;
+				height: 80px;
+				border-radius: 100%;
+				
+				position: absolute;
+			  pointer-events: none;
+				margin-left: -40px;
+				margin-top: -40px;
+			
+			
+				
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="d">
+			<img id="img" src="img/77.jpg"
+			style="width: 100%;"/>
+			<div id="son">
+				
+			</div>
+			
+		</div>
+
+      <script type="text/javascript">
+      	var oD=document.getElementById("d");
+      	var oSon=document.getElementById("son");
+      	var img=document.getElementById("img");
+      	img.addEventListener("load",function(){
+      		ratio=img.naturalWidth/img.width;
+      		
+      	});
+      	oD.addEventListener("mousemove",function(){
+      		//console.log("相对屏幕"+event.screenX,event.screenY);
+//    		console.log("相对文档"+event.pageX,event.pageY);
+//          console.log("可视区"+event.clientX,event.clientY);
+         oSon.style.backgroundImage = "url(" + img.src + ")";
+         var x=event.offsetX;
+         var y=event.offsetY;
+          oSon.style.left=event.offsetX+"px";
+          oSon.style.top=event.offsetY+"px";
+          oSon.style.backgroundPosition=(-ratio*x+40)+"px "+(-ratio*y+40)+"px";
+      	})
+      </script>
+	</body>
+</html>
